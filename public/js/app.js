@@ -1917,9 +1917,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
-    "itemTitle": String,
-    "itemContent": String,
-    "price": Number
+    itemTitle: String,
+    itemContent: String,
+    price: Number
+  },
+  mounted: function mounted() {
+    console.log(this.itemTitle);
   }
 });
 
