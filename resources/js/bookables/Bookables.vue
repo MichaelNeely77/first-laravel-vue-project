@@ -1,8 +1,12 @@
 <template>
     <div>
-        <bookable-list-item :item-title="bookable1.title" :item-content="bookable1.content" :price="1000"></bookable-list-item>
-        <bookable-list-item :item-title="bookable2.title" :item-content="bookable2.content" :price="1500"></bookable-list-item>
-        <bookable-list-item :item-title="bookable3.title" :item-content="bookable3.content" :price="1500"></bookable-list-item>
+        <bookable-list-item 
+        v-if="bookable1 !== null"
+        :item-title="bookable1.title" :item-content="bookable1.content" :price="1000"></bookable-list-item>
+        <bookable-list-item 
+        v-if="bookable2 !== null"
+        :item-title="bookable2.title" 
+        :item-content="bookable2.content" :price="1500"></bookable-list-item>
 
 
     </div>
@@ -21,14 +25,8 @@ export default {
             bookable2: null
         }
     },
-    // beforeCreate() {
-    //     console.log('before create');
-    // },
-    created() {
-        console.log('created');
-        console.log(this.bookable1);
-        console.log(this.bookable2);
 
+    created() {
         setTimeout(() =>{
             this.bookable1 = {
                 title: "Cheap Villa!!!",
@@ -38,32 +36,9 @@ export default {
                 title: "Awesome Cheap Villa 2",
                 content: "A very cheap villa that you and your family will love"
             };
-            this.bookable3 = {
-                title: "Expensive Villa",
-                content: "All the niceties you expect"
-            };
-        }, 5000);
+        }, 2000);
 
-        setTimeout(() => {
-            console.log("First change");
-            this.bookable1.title = "You will see this!";
-        }, 8000);
-        setTimeout(() => {
-            console.log("Second change");
-            this.bookable3.title = "You won't see this!";
-        }, 12000);
-    },
-    // beforeMount() {
-    //     console.log('before mount');
-    // },
-    // mounted() {
-    //     console.log('mounted');
-    // },
-    // beforeDestroy() {
-    //     console.log('before destroy');
-    // },
-    // destroyed() {
-    //     console.log('destroyed');
-    // }
-}
+    }
+
+};
 </script>
