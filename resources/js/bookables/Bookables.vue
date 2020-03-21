@@ -7,7 +7,7 @@
         <div v-else>
             <div class="row" v-for="row in rows" :key="'row' + row">
                 <div 
-                    class="col" 
+                    class="col d-flex align-items-stretch" 
                     v-for="(bookable, column) in bookablesInRow(row)" 
                     :key="'row' + row + column">
                     <bookable-list-item 
@@ -19,7 +19,6 @@
                 </div>
                 <div class="col" v-for="p in placeholdersInRow(row)" :key="'placeholder' + row + p"></div>
             </div>
-
         </div>
     </div>
 </template>
