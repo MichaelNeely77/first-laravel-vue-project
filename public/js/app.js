@@ -1922,7 +1922,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
     itemTitle: String,
-    itemContent: String,
+    itemDescription: String,
     price: Number
   }
 });
@@ -2008,31 +2008,10 @@ __webpack_require__.r(__webpack_exports__);
       return console.log("Error ".concat(result));
     });
     console.log(p);
-    setTimeout(function () {
-      _this.bookables = [{
-        title: "Awesome Cheap Villa",
-        content: "A very cheap villa that you and your family will love"
-      }, {
-        title: "Awesome Cheap Villa 2",
-        content: "A very cheap villa that you and your family will love"
-      }, {
-        title: "Awesome Cheap Villa 3",
-        content: "A very cheap villa that you and your family will love"
-      }, {
-        title: "Awesome Cheap Villa 4",
-        content: "A very cheap villa that you and your family will love"
-      }, {
-        title: "Awesome Cheap Villa 5",
-        content: "A very cheap villa that you and your family will love"
-      }, {
-        title: "Awesome Cheap Villa 6",
-        content: "A very cheap villa that you and your family will love"
-      }, {
-        title: "Awesome Cheap Villa 7",
-        content: "A very cheap villa that you and your family will love"
-      }];
+    var request = axios.get("/api/bookables").then(function (response) {
+      _this.bookables = response.data;
       _this.loading = false;
-    }, 2000);
+    });
   }
 });
 
@@ -37498,7 +37477,9 @@ var render = function() {
     _c("div", { staticClass: "card-body" }, [
       _c("h5", { staticClass: "card-title" }, [_vm._v(_vm._s(_vm.itemTitle))]),
       _vm._v(" "),
-      _c("p", { staticClass: "card-text" }, [_vm._v(_vm._s(_vm.itemContent))])
+      _c("p", { staticClass: "card-text" }, [
+        _vm._v(_vm._s(_vm.itemDescription))
+      ])
     ])
   ])
 }
@@ -37525,7 +37506,6 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _vm._v("\n    Rows is: " + _vm._s(_vm.rows) + "\n    "),
     _vm.loading
       ? _c("div", [_vm._v("\n        Data is loading...\n    ")])
       : _c(
@@ -37543,7 +37523,7 @@ var render = function() {
                       _c("bookable-list-item", {
                         attrs: {
                           "item-title": bookable.title,
-                          "item-content": bookable.content,
+                          "item-description": bookable.description,
                           price: 1000
                         }
                       })

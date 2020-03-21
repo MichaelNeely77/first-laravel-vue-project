@@ -1,6 +1,6 @@
 <template>
     <div>
-        Rows is: {{ rows }}
+        <!-- Rows is: {{ rows }} -->
         <div v-if="loading">
             Data is loading...
         </div>
@@ -12,7 +12,7 @@
                     :key="'row' + row + column">
                     <bookable-list-item 
                         :item-title="bookable.title" 
-                        :item-content="bookable.content" 
+                        :item-description="bookable.description" 
                         :price="1000"
                     >
                     </bookable-list-item>
@@ -65,41 +65,12 @@ export default {
 
         console.log(p);
 
-        setTimeout(() =>{
-            this.bookables = [{
-                title: "Awesome Cheap Villa",
-                content: "A very cheap villa that you and your family will love"
-            },
-            {
-                title: "Awesome Cheap Villa 2",
-                content: "A very cheap villa that you and your family will love"
-            },
-            {
-                title: "Awesome Cheap Villa 3",
-                content: "A very cheap villa that you and your family will love"
-            },
-            {
-                title: "Awesome Cheap Villa 4",
-                content: "A very cheap villa that you and your family will love"
-            },
-            {
-                title: "Awesome Cheap Villa 5",
-                content: "A very cheap villa that you and your family will love"
-            },
-            {
-                title: "Awesome Cheap Villa 6",
-                content: "A very cheap villa that you and your family will love"
-            },
-            {
-                title: "Awesome Cheap Villa 7",
-                content: "A very cheap villa that you and your family will love"
-            }
-            
-            ];
+        const request = axios
+        .get("/api/bookables")
+        .then(response => {
+            this.bookables = response.data;
             this.loading = false;
-        }, 2000);
-
+        });
     }
-
 };
 </script>
