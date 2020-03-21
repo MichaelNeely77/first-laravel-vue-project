@@ -26,5 +26,5 @@ Route::get('bookables', function(Request $request) {
 
 Route::get('bookables/{id}', function(Request $request, $bookableId) {
 
-    return Bookable::find($bookableId);
+    return Bookable::findOrFail($bookableId);
 });

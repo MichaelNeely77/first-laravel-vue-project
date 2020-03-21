@@ -53,6 +53,18 @@ export default {
  }        },
     created() {
         this.loading = true;
+
+        const p = new Promise((resolve, reject) => {
+            console.log(resolve);
+            console.log(reject);
+            setTimeout(() => resolve("hello"), 3000);
+        })
+        .then(result => "Hello again " + result)
+        .then(result => console.log(result))
+        .catch(result => console.log(`Error ${result}`));
+
+        console.log(p);
+
         setTimeout(() =>{
             this.bookables = [{
                 title: "Awesome Cheap Villa",
