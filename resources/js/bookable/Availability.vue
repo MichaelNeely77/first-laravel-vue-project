@@ -6,18 +6,31 @@
                 <label for="from">From</label>
                 <input type="text" name="from"
                 class="form-control form-control-sm"
-                placeholder="Start Date" />
+                placeholder="Start Date" 
+                v-model="from" />
             </div>
             <div class="form-group-class col-md-6">
                 <label for="to">To</label>
                 <input type="text" name="from"
                 class="form-control form-control-sm"
-                placeholder="End Date" />
+                placeholder="End Date"
+                v-model="to"/>
             </div>
         </div>
         <button class="btn btn-secondary btn-block mt-2">Check!</button>
     </div>
 </template>
+<script>
+export default {
+    data() {
+        return {
+            from: null,
+            to: null
+        }
+
+    }
+}
+</script>
 
 <style scoped>
     label {
