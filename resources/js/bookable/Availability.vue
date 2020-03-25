@@ -7,7 +7,9 @@
                 <input type="text" name="from"
                 class="form-control form-control-sm"
                 placeholder="Start Date" 
-                v-model="from" />
+                v-model="from" 
+                @keyup.enter="check"
+                />
             </div>
             <div class="form-group-class col-md-6">
                 <label for="to">To</label>
@@ -15,7 +17,7 @@
                 class="form-control form-control-sm"
                 placeholder="End Date"
                 v-model="to"
-                @keyup="check"
+                @keyup.enter="check"
                 />
             </div>
         </div>

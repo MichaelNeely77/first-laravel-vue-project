@@ -1932,6 +1932,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -38196,6 +38198,15 @@ var render = function() {
           attrs: { type: "text", name: "from", placeholder: "Start Date" },
           domProps: { value: _vm.from },
           on: {
+            keyup: function($event) {
+              if (
+                !$event.type.indexOf("key") &&
+                _vm._k($event.keyCode, "enter", 13, $event.key, "Enter")
+              ) {
+                return null
+              }
+              return _vm.check($event)
+            },
             input: function($event) {
               if ($event.target.composing) {
                 return
@@ -38222,7 +38233,15 @@ var render = function() {
           attrs: { type: "text", name: "from", placeholder: "End Date" },
           domProps: { value: _vm.to },
           on: {
-            keyup: _vm.check,
+            keyup: function($event) {
+              if (
+                !$event.type.indexOf("key") &&
+                _vm._k($event.keyCode, "enter", 13, $event.key, "Enter")
+              ) {
+                return null
+              }
+              return _vm.check($event)
+            },
             input: function($event) {
               if ($event.target.composing) {
                 return
