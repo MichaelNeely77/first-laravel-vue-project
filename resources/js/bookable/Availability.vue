@@ -14,10 +14,12 @@
                 <input type="text" name="from"
                 class="form-control form-control-sm"
                 placeholder="End Date"
-                v-model="to"/>
+                v-model="to"
+                @keyup="check"
+                />
             </div>
         </div>
-        <button class="btn btn-secondary btn-block mt-2">Check!</button>
+        <button class="btn btn-secondary btn-block mt-2" @click="check">Check!</button>
     </div>
 </template>
 <script>
@@ -28,6 +30,11 @@ export default {
             to: null
         }
 
+    },
+    methods: {
+        check() {
+            alert("I will check something now");
+        }
     }
 }
 </script>

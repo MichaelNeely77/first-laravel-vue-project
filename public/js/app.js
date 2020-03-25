@@ -1930,12 +1930,19 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
       from: null,
       to: null
     };
+  },
+  methods: {
+    check: function check() {
+      alert("I will check something now");
+    }
   }
 });
 
@@ -38215,6 +38222,7 @@ var render = function() {
           attrs: { type: "text", name: "from", placeholder: "End Date" },
           domProps: { value: _vm.to },
           on: {
+            keyup: _vm.check,
             input: function($event) {
               if ($event.target.composing) {
                 return
@@ -38226,9 +38234,14 @@ var render = function() {
       ])
     ]),
     _vm._v(" "),
-    _c("button", { staticClass: "btn btn-secondary btn-block mt-2" }, [
-      _vm._v("Check!")
-    ])
+    _c(
+      "button",
+      {
+        staticClass: "btn btn-secondary btn-block mt-2",
+        on: { click: _vm.check }
+      },
+      [_vm._v("Check!")]
+    )
   ])
 }
 var staticRenderFns = []
