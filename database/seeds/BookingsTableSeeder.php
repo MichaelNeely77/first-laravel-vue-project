@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\Bookable;
+use App\Booking;
 
 class BookingsTableSeeder extends Seeder
 {
@@ -23,10 +25,10 @@ class BookingsTableSeeder extends Seeder
                     'from' => $from,
                     'to' => $to
                 ]);
-                $bookikngs->push($booking);
+                $bookings->push($booking);
             }
 
-            $bookable->bookings->saveMany($bookings);
+            $bookable->bookings()->saveMany($bookings);
         });
        
     }
