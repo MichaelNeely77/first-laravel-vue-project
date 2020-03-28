@@ -23,7 +23,7 @@ class BookableAvailabilityController extends Controller
         ]);
         $bookable = Bookable::findOrFail($id);
 
-        dd($bookable->bookings());
+        dd($bookable->bookings()->betweenDates($data['from'], $data['to'])->count());
     }
         
 }
