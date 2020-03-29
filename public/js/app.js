@@ -1949,14 +1949,17 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       this.loading = true;
+      this.errors = null;
       axios.get('/api/bookables/${this.$route.params.id}/availability?from=${this.from}&to=${this.to}').then(function (response) {
         _this.status = response.status;
       })["catch"](function (error) {
         if (422 == error.response.status) {
-          _this.error = error.response.data.errors;
+          _this.errors = error.response.data.errors;
         }
 
         _this.status = error.response.status;
+      }).then(function () {
+        return _this.loading = false;
       });
     }
   }
