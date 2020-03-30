@@ -1981,7 +1981,7 @@ __webpack_require__.r(__webpack_exports__);
       return 200 == this.status;
     },
     noAvailability: function noAvailability() {
-      return 400 == this.status;
+      return 404 == this.status;
     }
   }
 });
@@ -38219,10 +38219,16 @@ var render = function() {
       [
         _vm._v("Check Availability\n        "),
         _vm.noAvailability
-          ? _c("span", { staticClass: "text-danger" })
+          ? _c("span", { staticClass: "text-danger" }, [
+              _vm._v("(NO AVAILABILITY)")
+            ])
           : _vm._e(),
         _vm._v(" "),
-        _vm.hasAvailability ? _c("span") : _vm._e()
+        _vm.hasAvailability
+          ? _c("span", { staticClass: "text-success" }, [
+              _vm._v("(AVAILABILE)")
+            ])
+          : _vm._e()
       ]
     ),
     _vm._v(" "),
