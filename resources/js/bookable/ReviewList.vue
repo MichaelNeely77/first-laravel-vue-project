@@ -11,7 +11,7 @@
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    {{ review.created_at }}
+                    {{ review.created_at | fromNow }}
                 </div>
             </div>
             <div class="row pt-4 pb-4">
@@ -26,6 +26,7 @@
     </div>
 </template>
 <script>
+import moment from "moment";
 export default {
     props: {
         bookableId: String
@@ -42,5 +43,11 @@ export default {
         .then(response => (this.reviews = response.data.data))
         .then(() => (this.loading = false));
     }
+    // ,
+    // filters: {
+    //     fromNow(value) {
+    //         return moment(value).fromNow();
+    //     }
+    // }
 }
 </script>
