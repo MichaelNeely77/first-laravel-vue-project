@@ -2254,12 +2254,8 @@ __webpack_require__.r(__webpack_exports__);
         content: null
       }
     };
-  } // methods: {
-  //     onRatingChanged(rating) {
-  //         console.log(rating);
-  //     }
-  // }
-
+  },
+  created: function created() {}
 });
 
 /***/ }),
@@ -56408,8 +56404,25 @@ var render = function() {
     _vm._m(0),
     _vm._v(" "),
     _c("textarea", {
+      directives: [
+        {
+          name: "model",
+          rawName: "v-model",
+          value: _vm.review.content,
+          expression: "review.content"
+        }
+      ],
       staticClass: "form-control",
-      attrs: { name: "content", id: "", cols: "30", rows: "10" }
+      attrs: { name: "content", id: "", cols: "30", rows: "10" },
+      domProps: { value: _vm.review.content },
+      on: {
+        input: function($event) {
+          if ($event.target.composing) {
+            return
+          }
+          _vm.$set(_vm.review, "content", $event.target.value)
+        }
+      }
     }),
     _vm._v(" "),
     _c("button", { staticClass: "btn btn-primary btn-lg btn-block mt-2" }, [

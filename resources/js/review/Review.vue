@@ -10,7 +10,7 @@
         <div class="form-group">
             <label for="content" class="text-muted">Describe your experience with us</label>
         </div>
-        <textarea name="content" id="" cols="30" rows="10" class="form-control"></textarea>
+        <textarea name="content" id="" cols="30" rows="10" class="form-control" v-model="review.content"></textarea>
         <button class="btn btn-primary btn-lg btn-block mt-2">Submit</button>
     </div>
 </template>
@@ -24,11 +24,10 @@ export default {
                 content: null
             }
         }
+    },
+    created() {
+
+
     }
-    // methods: {
-    //     onRatingChanged(rating) {
-    //         console.log(rating);
-    //     }
-    // }
-}
+};
 </script>
