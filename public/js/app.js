@@ -56390,7 +56390,7 @@ var render = function() {
         _vm._v(" "),
         _c("star-rating", {
           staticClass: "fa-3x",
-          attrs: { rating: 5 },
+          attrs: { rating: _vm.review.rating },
           on: {
             "rating:changed": function($event) {
               _vm.review.rating = $event
