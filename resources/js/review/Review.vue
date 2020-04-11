@@ -12,32 +12,31 @@
                     <p>
                        From {{ booking.from }} to {{ booking.to }}
                     </p>
-                    
                 </div>
             </div>
         </div>
         <div :class="[{'col-md-8': loading || !alreadyReviewed}, {'col-md-12': !loading && alreadyReviewed}]">
-                    <div v-if="loading">Loading...</div>
-        <div v-else>
-                    <div v-if="alreadyReviewed">
-            <h3>You've already left a review for this booking</h3>
-        </div>
-        <div v-else>
-            <div class="form-group">
-            <label for="" class="text-muted">Select the star rating (1 is worst - 5 is best)</label>
-            <star-rating 
-                class="fa-3x" 
-                v-model="review.rating">
-            </star-rating>
-        </div>
-        <div class="form-group">
-            <label for="content" class="text-muted">Describe your experience with us</label>
-        </div>
-        <textarea name="content" id="" cols="30" rows="10" class="form-control" v-model="review.content"></textarea>
-        <button class="btn btn-primary btn-lg btn-block mt-2">Submit</button>
-        </div>
+            <div v-if="loading">Loading...</div>
+            <div v-else>
+                <div v-if="alreadyReviewed">
+                    <h3>You've already left a review for this booking</h3>
+                </div>
+                <div v-else>
+                    <div class="form-group">
+                        <label for="" class="text-muted">Select the star rating (1 is worst - 5 is best)</label>
+                            <star-rating 
+                                class="fa-3x" 
+                                v-model="review.rating">
+                            </star-rating>
+                    </div>
+                    <div class="form-group">
+                        <label for="content" class="text-muted">Describe your experience with us</label>
+                    </div>
+                    <textarea name="content" id="" cols="30" rows="10" class="form-control" v-model="review.content"></textarea>
+                    <button class="btn btn-primary btn-lg btn-block mt-2">Submit</button>
+                </div>
 
-        </div>
+            </div>
 
         </div>
 
@@ -81,10 +80,11 @@ export default {
             return this.hasReview || !this.booking;
         },
         hasReview() {
-            return this.existingReview != null;
+            return this.existingReview !== null;
         },
         hasBooking() {
-            return this.booking != null;        }
+            return this.booking !== null;        
+        }
     }
 };
 </script>

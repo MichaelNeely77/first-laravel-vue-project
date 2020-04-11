@@ -2275,7 +2275,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2309,10 +2308,10 @@ __webpack_require__.r(__webpack_exports__);
       return this.hasReview || !this.booking;
     },
     hasReview: function hasReview() {
-      return this.existingReview != null;
+      return this.existingReview !== null;
     },
     hasBooking: function hasBooking() {
-      return this.booking != null;
+      return this.booking !== null;
     }
   }
 });
