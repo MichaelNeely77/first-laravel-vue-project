@@ -35,8 +35,22 @@
                     <div class="form-group">
                         <label for="content" class="text-muted">Describe your experience with us</label>
                     </div>
-                    <textarea name="content" id="" cols="30" rows="10" class="form-control" v-model="review.content"></textarea>
-                    <button class="btn btn-primary btn-lg btn-block mt-2" @click.prevent="submit" :disabled="loading">Submit</button>
+                    <textarea 
+                        name="content" id="" 
+                        cols="30" 
+                        rows="10" 
+                        class="form-control" 
+                        v-model="review.content"
+                        :class="[{'is-invalid': errorFor('content')}]">
+                    </textarea>
+
+                        <div 
+                            class="invalid-feedback" v-for="(error, index) in errorFor('content')" 
+                            :key="'content'+index">{{error}}
+                        </div>
+
+
+                    <button class="btn btn-primary btn-lg btn-block mt-2" @click.prevent="submit" :disabled="sending">Submit</button>
                 </div>
 
             </div>
@@ -64,7 +78,8 @@ export default {
         loading: false,
         booking: null,
         error: false,
-        errors: null
+        errors: null,
+        sending: false
         }
     },
     created() {
@@ -115,7 +130,7 @@ export default {
     methods: {
         submit() {
             this.errors = null;
-            this.loading = true;
+            this.sending = true;
 
             axios.post(`/api/reviews`, this.review)
                 .then(response => console.log(response))
@@ -131,7 +146,10 @@ export default {
 
                     this.error = true;
                 })
-                .then(() => (this.loading = false));
+                .then(() => (this.sending = false));
+        },
+        errorFor(field) {
+            return null != this.errors && this.errors[field] ? this.errors[field] : null;
         }
     }
 };
