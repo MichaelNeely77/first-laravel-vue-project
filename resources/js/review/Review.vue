@@ -34,7 +34,8 @@
                     </div>
                     <div class="form-group">
                         <label for="content" class="text-muted">Describe your experience with us</label>
-                    </div>
+                    
+                    
                     <textarea 
                         name="content" id="" 
                         cols="30" 
@@ -43,12 +44,12 @@
                         v-model="review.content"
                         :class="[{'is-invalid': errorFor('content')}]">
                     </textarea>
+                    
+                        <v-errors :errors="errorFor('content')"></v-errors>
+                    
+                        
 
-                        <div 
-                            class="invalid-feedback" v-for="(error, index) in errorFor('content')" 
-                            :key="'content'+index">{{error}}
                         </div>
-
 
                     <button class="btn btn-primary btn-lg btn-block mt-2" @click.prevent="submit" :disabled="sending">Submit</button>
                 </div>
