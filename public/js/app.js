@@ -2318,6 +2318,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -7109,7 +7111,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.error[data-v-b58db574] {\n    color: #999;\n    font-size: 10rem;\n}\n\n", ""]);
+exports.push([module.i, "\n.success[data-v-b58db574] {\n    color: #999;\n    font-size: 10rem;\n}\n\n", ""]);
 
 // exports
 
@@ -57470,11 +57472,16 @@ var render = function() {
   return _c(
     "div",
     [
-      _vm.success ? _c("success") : _vm._e(),
+      _vm.success
+        ? _c("success", [
+            _vm._v("\n        You've left a review. Thank you very much!\n    ")
+          ])
+        : _vm._e(),
       _vm._v(" "),
-      _vm.error
-        ? _c("fatal-error")
-        : _c("div", { staticClass: "row" }, [
+      _vm.error ? _c("fatal-error") : _vm._e(),
+      _vm._v(" "),
+      !_vm.success && !_vm.error
+        ? _c("div", { staticClass: "row" }, [
             _c(
               "div",
               {
@@ -57658,6 +57665,7 @@ var render = function() {
               ]
             )
           ])
+        : _vm._e()
     ],
     1
   )
@@ -57778,22 +57786,15 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", { staticClass: "text-center success" }, [
+    _c("i", { staticClass: "fas fa-thumbs-up" }),
+    _vm._v(" "),
+    _c("h1", { staticClass: "mt-4" }, [_vm._v("Success!")]),
+    _vm._v(" "),
+    _c("h2", [_vm._t("default")], 2)
+  ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "text-center success" }, [
-      _c("i", { staticClass: "fas fa-thumbs-up" }),
-      _vm._v(" "),
-      _c("h1", { staticClass: "mt-4" }, [_vm._v("Success!")]),
-      _vm._v(" "),
-      _c("h2", [_vm._v("The operation was successful")])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
