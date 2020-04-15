@@ -1,6 +1,6 @@
 <template>
     <div>
-
+        <success v-if="success"></success>
         <fatal-error v-if="error"></fatal-error>
         <div class="row" v-else>
             <div :class="[{'col-md-4': twoColumns}, {'d-none': oneColumn}]">
@@ -81,7 +81,8 @@ export default {
         loading: false,
         booking: null,
         error: false,
-        sending: false
+        sending: false,
+        success: false
         }
     },
     async created() {
@@ -127,9 +128,12 @@ export default {
         submit() {
             this.errors = null;
             this.sending = true;
+            this.success = false;
 
             axios.post(`/api/reviews`, this.review)
-                .then(response => console.log(response))
+                .then(response => {
+                    this.success = 201 == response.status;
+                })
                 .catch(err => {
                     if(is422(err)) {
                         const errors = err.response.data.errors;
