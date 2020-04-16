@@ -1959,6 +1959,9 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   mixins: [_shared_mixins_validationErrors__WEBPACK_IMPORTED_MODULE_1__["default"]],
+  props: {
+    bookableId: [String, Number]
+  },
   data: function data() {
     return {
       from: null,
@@ -2324,6 +2327,9 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   mixins: [_shared_mixins_validationErrors__WEBPACK_IMPORTED_MODULE_2__["default"]],
+  props: {
+    bookableId: [String, Number]
+  },
   data: function data() {
     return {
       review: {
@@ -57049,12 +57055,6 @@ var render = function() {
             attrs: { to: { name: "home" } }
           },
           [_vm._v("Laravel BNB")]
-        ),
-        _vm._v(" "),
-        _c(
-          "router-link",
-          { staticClass: "btn nav-button", attrs: { to: { name: "second" } } },
-          [_vm._v("Second")]
         )
       ],
       1
