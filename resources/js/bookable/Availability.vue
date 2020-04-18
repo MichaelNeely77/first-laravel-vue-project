@@ -1,8 +1,11 @@
 <template>
     <div>
         <h6 class="text-uppercase text-secondary font-weight-bolder">Check Availability
-            <span v-if="noAvailability" class="text-danger">(NO AVAILABILITY)</span>
-            <span v-if="hasAvailability" class="text-success">(AVAILABILE)</span>
+            <transition name="fade">
+                <span v-if="noAvailability" class="text-danger">(NO AVAILABILITY)</span>
+                <span v-if="hasAvailability" class="text-success">(AVAILABILE)</span>
+            </transition>
+            
         </h6>
         <div class="form-row">
             <div class="form-group-class col-md-6">
