@@ -31,7 +31,10 @@
                 <v-errors :errors="errorFor('to')"></v-errors>
             </div>
         </div>
-        <button class="btn btn-secondary btn-block mt-2" @click="check" :disabled="loading">Check!</button>
+        <button class="btn btn-secondary btn-block mt-2" @click="check" :disabled="loading">
+            <span v-if="!loading">Check!</span>
+            <span v-if="loading"><i class="fas fa-circle-notch fa-spin"></i>Checking...</span>
+            </button>
     </div>
 </template>
 <script>
