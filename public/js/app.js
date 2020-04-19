@@ -57261,7 +57261,7 @@ var render = function() {
         _vm.loading
           ? _c("span", [
               _c("i", { staticClass: "fas fa-circle-notch fa-spin" }),
-              _vm._v("Checking...")
+              _vm._v(" Checking...")
             ])
           : _vm._e()
       ]
