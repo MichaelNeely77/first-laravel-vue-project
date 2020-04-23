@@ -16,11 +16,11 @@
         <div class="col-md-4 pb-4">
             <availability :bookable-id="this.$route.params.id" @availability="checkPrice($event)" class="mb-4"></availability>
             <transition name="fade">
-                <price-breakdown v-if="price"></price-breakdown>
+                <price-breakdown v-if="price" :price="price" class="mb-4"></price-breakdown>
             </transition>
             <transition name="fade">
                 
-                <button class="btn btn-outline-secondary btn-block" v-if="price">Book Now</button>
+                <button class="btn btn-outline-secondary btn-block" v-if="price" @click="addToBasket">Book Now</button>
             </transition>
 
 
@@ -69,6 +69,13 @@ export default {
             } catch (err) {
                 this.price = null;
             }
+        },
+        addToBasket() {
+            this.$store.commit("addToBasket", {
+                bookable: this.bookable,
+                price: this.price,
+                dates: this.lastSearch
+            });
         }
     }
 }

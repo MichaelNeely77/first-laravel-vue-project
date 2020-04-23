@@ -26,7 +26,7 @@ class BookablePriceController extends Controller
         ]);
 
         $days = (new Carbon($data['from']))->diffInDays(new Carbon($data['to'])) + 1;
-        $price = $days = $bookable->price;
+        $price = $days * $bookable->price;
 
 
         return response()->json([
