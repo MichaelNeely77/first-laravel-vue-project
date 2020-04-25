@@ -28,7 +28,7 @@
 
             <button class="btn btn-outline-secondary btn-block" 
                 v-if="inBasketAlready"
-                @click="addToBasket"
+                @click="removeFromBasket"
 
                 >Remove from Basket</button>
 
@@ -99,14 +99,14 @@ export default {
             }
         },
         addToBasket() {
-            this.$store.commit("addToBasket", {
+            this.$store.dispatch("addToBasket", {
                 bookable: this.bookable,
                 price: this.price,
                 dates: this.lastSearch
             });
         },
         removeFromBasket() {
-            this.$store.commit("removeFromBasket", this.bookable.id)
+            this.$store.dispatch("removeFromBasket", this.bookable.id)
         }
     }
 }
