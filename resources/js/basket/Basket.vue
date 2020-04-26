@@ -31,7 +31,7 @@
 
                     </div>
                     <div class="pt-2 pb-2 text-right">
-                        <button class="btn btn-sm btn-outline-secondary"><i class="fas fa-trash-alt"></i></button>
+                        <button class="btn btn-sm btn-outline-secondary" @click="$store.dispatch('removeFromBasket', item.bookable.id)"><i class="fas fa-trash-alt"></i></button>
                     </div>
                 </div>
 
