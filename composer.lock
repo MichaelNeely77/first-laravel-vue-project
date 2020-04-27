@@ -683,6 +683,7 @@
                     "email": "jakub.onderka@gmail.com"
                 }
             ],
+            "abandoned": "php-parallel-lint/php-console-color",
             "time": "2018-09-29T17:23:10+00:00"
         },
         {
@@ -729,6 +730,7 @@
                 }
             ],
             "description": "Highlight PHP code in terminal",
+            "abandoned": "php-parallel-lint/php-console-highlighter",
             "time": "2018-09-29T18:48:56+00:00"
         },
         {
@@ -1670,16 +1672,16 @@
         },
         {
             "name": "psr/log",
-            "version": "1.1.2",
+            "version": "1.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/log.git",
-                "reference": "446d54b4cb6bf489fc9d75f55843658e6f25d801"
+                "reference": "0f73288fd15629204f9d42b7055f72dacbe811fc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/log/zipball/446d54b4cb6bf489fc9d75f55843658e6f25d801",
-                "reference": "446d54b4cb6bf489fc9d75f55843658e6f25d801",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/0f73288fd15629204f9d42b7055f72dacbe811fc",
+                "reference": "0f73288fd15629204f9d42b7055f72dacbe811fc",
                 "shasum": ""
             },
             "require": {
@@ -1713,7 +1715,7 @@
                 "psr",
                 "psr-3"
             ],
-            "time": "2019-11-01T11:05:21+00:00"
+            "time": "2020-03-23T09:12:05+00:00"
         },
         {
             "name": "psr/simple-cache",
@@ -2340,16 +2342,16 @@
         },
         {
             "name": "symfony/finder",
-            "version": "v5.0.5",
+            "version": "v5.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
-                "reference": "6251f201187ca9d66f6b099d3de65d279e971138"
+                "reference": "600a52c29afc0d1caa74acbec8d3095ca7e9910d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/finder/zipball/6251f201187ca9d66f6b099d3de65d279e971138",
-                "reference": "6251f201187ca9d66f6b099d3de65d279e971138",
+                "url": "https://api.github.com/repos/symfony/finder/zipball/600a52c29afc0d1caa74acbec8d3095ca7e9910d",
+                "reference": "600a52c29afc0d1caa74acbec8d3095ca7e9910d",
                 "shasum": ""
             },
             "require": {
@@ -2385,7 +2387,7 @@
             ],
             "description": "Symfony Finder Component",
             "homepage": "https://symfony.com",
-            "time": "2020-02-14T07:43:07+00:00"
+            "time": "2020-03-27T16:56:45+00:00"
         },
         {
             "name": "symfony/http-foundation",
@@ -2781,16 +2783,16 @@
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.14.0",
+            "version": "v1.15.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "34094cfa9abe1f0f14f48f490772db7a775559f2"
+                "reference": "81ffd3a9c6d707be22e3012b827de1c9775fc5ac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/34094cfa9abe1f0f14f48f490772db7a775559f2",
-                "reference": "34094cfa9abe1f0f14f48f490772db7a775559f2",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/81ffd3a9c6d707be22e3012b827de1c9775fc5ac",
+                "reference": "81ffd3a9c6d707be22e3012b827de1c9775fc5ac",
                 "shasum": ""
             },
             "require": {
@@ -2802,7 +2804,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.14-dev"
+                    "dev-master": "1.15-dev"
                 }
             },
             "autoload": {
@@ -2836,7 +2838,7 @@
                 "portable",
                 "shim"
             ],
-            "time": "2020-01-13T11:15:53+00:00"
+            "time": "2020-03-09T19:04:49+00:00"
         },
         {
             "name": "symfony/polyfill-php72",
@@ -3270,16 +3272,16 @@
         },
         {
             "name": "symfony/var-dumper",
-            "version": "v5.0.5",
+            "version": "v5.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/var-dumper.git",
-                "reference": "3a37aeb1132d1035536d3d6aa9cb06c2ff9355e9"
+                "reference": "f74a126acd701392eef2492a17228d42552c86b5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/3a37aeb1132d1035536d3d6aa9cb06c2ff9355e9",
-                "reference": "3a37aeb1132d1035536d3d6aa9cb06c2ff9355e9",
+                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/f74a126acd701392eef2492a17228d42552c86b5",
+                "reference": "f74a126acd701392eef2492a17228d42552c86b5",
                 "shasum": ""
             },
             "require": {
@@ -3341,7 +3343,7 @@
                 "debug",
                 "dump"
             ],
-            "time": "2020-02-26T22:30:10+00:00"
+            "time": "2020-03-27T16:56:45+00:00"
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",
@@ -3507,16 +3509,16 @@
     "packages-dev": [
         {
             "name": "barryvdh/laravel-debugbar",
-            "version": "v3.2.9",
+            "version": "v3.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/barryvdh/laravel-debugbar.git",
-                "reference": "42d5da5379a7860093f8e4032167e4cb5ebec180"
+                "reference": "95c31aab33689cd4572d27038186886f4bfa63ae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/barryvdh/laravel-debugbar/zipball/42d5da5379a7860093f8e4032167e4cb5ebec180",
-                "reference": "42d5da5379a7860093f8e4032167e4cb5ebec180",
+                "url": "https://api.github.com/repos/barryvdh/laravel-debugbar/zipball/95c31aab33689cd4572d27038186886f4bfa63ae",
+                "reference": "95c31aab33689cd4572d27038186886f4bfa63ae",
                 "shasum": ""
             },
             "require": {
@@ -3571,7 +3573,7 @@
                 "profiler",
                 "webprofiler"
             ],
-            "time": "2020-02-25T20:42:23+00:00"
+            "time": "2020-04-16T20:19:40+00:00"
         },
         {
             "name": "doctrine/instantiator",
@@ -3959,16 +3961,16 @@
         },
         {
             "name": "maximebf/debugbar",
-            "version": "v1.16.1",
+            "version": "v1.16.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/maximebf/php-debugbar.git",
-                "reference": "58998b818c6567fac01e35b8a4b70c1a64530556"
+                "reference": "40f375504a4dd8e59f779c3f3cac524777ddcde5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/maximebf/php-debugbar/zipball/58998b818c6567fac01e35b8a4b70c1a64530556",
-                "reference": "58998b818c6567fac01e35b8a4b70c1a64530556",
+                "url": "https://api.github.com/repos/maximebf/php-debugbar/zipball/40f375504a4dd8e59f779c3f3cac524777ddcde5",
+                "reference": "40f375504a4dd8e59f779c3f3cac524777ddcde5",
                 "shasum": ""
             },
             "require": {
@@ -4016,7 +4018,7 @@
                 "debug",
                 "debugbar"
             ],
-            "time": "2019-11-24T09:46:11+00:00"
+            "time": "2020-04-16T09:05:52+00:00"
         },
         {
             "name": "mockery/mockery",
@@ -5538,16 +5540,16 @@
         },
         {
             "name": "symfony/debug",
-            "version": "v4.4.5",
+            "version": "v4.4.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/debug.git",
-                "reference": "a980d87a659648980d89193fd8b7a7ca89d97d21"
+                "reference": "346636d2cae417992ecfd761979b2ab98b339a45"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/debug/zipball/a980d87a659648980d89193fd8b7a7ca89d97d21",
-                "reference": "a980d87a659648980d89193fd8b7a7ca89d97d21",
+                "url": "https://api.github.com/repos/symfony/debug/zipball/346636d2cae417992ecfd761979b2ab98b339a45",
+                "reference": "346636d2cae417992ecfd761979b2ab98b339a45",
                 "shasum": ""
             },
             "require": {
@@ -5590,7 +5592,7 @@
             ],
             "description": "Symfony Debug Component",
             "homepage": "https://symfony.com",
-            "time": "2020-02-23T14:41:43+00:00"
+            "time": "2020-03-27T16:54:36+00:00"
         },
         {
             "name": "theseer/tokenizer",
