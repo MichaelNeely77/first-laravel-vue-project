@@ -36,7 +36,6 @@ export default {
             const basket = localStorage.getItem('basket');
             if(basket) {
                 context.commit('setBasket', JSON.parse(basket));
-                
             }
         },
         addToBasket({commit, state}, payload) {

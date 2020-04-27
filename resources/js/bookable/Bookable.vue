@@ -81,13 +81,13 @@ export default {
             return false;
         }
 
-        return this.store.getters.inBasketAlready(this.bookable.id)
+        return this.$store.getters.inBasketAlready(this.bookable.id)
     }
 },
     methods: {
         async checkPrice(hasAvailability) {
             if (hasAvailability = null) {
-                this.price = mull;
+                this.price = null;
                 return;
             }
             try {
