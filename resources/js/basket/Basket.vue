@@ -2,7 +2,54 @@
     <div>
         <div class="row">
             <div class="col md-8">
-                Checkout Form
+                <div class="form-row">
+                    <div class="col-md-6">
+                        <label for="">First name</label>
+                        <input type="text" name="first_name" class="form-control">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="">Last name</label>
+                        <input type="text" name="last_name" class="form-control">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <label for="">Email</label>
+                        <input type="text" name="" class="form-control">
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 form-group">
+                        <label for="">Street</label>
+                        <input type="text" name="" class="form-control">
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <label for="">City</label>
+                        <input type="text" name="" class="form-control">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 form-group">
+                        <label for="">Country</label>
+                        <input type="text" name="" class="form-control">
+                    </div>
+                    <div class="col-md-4 form-group">
+                        <label for="">State</label>
+                        <input type="text" name="" class="form-control">
+                    </div>
+                    <div class="col-md-2 form-group">
+                        <label for="">Zip</label>
+                        <input type="text" name="" class="form-control">
+                    </div>
+                </div>
+                <hr>
+                <div class="col-md-12 form-group">
+                    <button type="submit" class="btn btn-large btn-primary btn-block">Book Now!</button>
+                </div>
+                
+
+
             </div>
             <div class="col-md-4">
                 <div class="d-flex justify-content-between">
