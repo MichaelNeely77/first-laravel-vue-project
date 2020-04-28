@@ -57698,7 +57698,7 @@ var staticRenderFns = [
           _vm._v(" "),
           _c("input", {
             staticClass: "form-control",
-            attrs: { type: "text", name: "" }
+            attrs: { type: "email", name: "email" }
           })
         ])
       ]),
@@ -57709,7 +57709,7 @@ var staticRenderFns = [
           _vm._v(" "),
           _c("input", {
             staticClass: "form-control",
-            attrs: { type: "text", name: "" }
+            attrs: { type: "text", name: "address" }
           })
         ]),
         _vm._v(" "),
@@ -57718,7 +57718,7 @@ var staticRenderFns = [
           _vm._v(" "),
           _c("input", {
             staticClass: "form-control",
-            attrs: { type: "text", name: "" }
+            attrs: { type: "text", name: "city" }
           })
         ])
       ]),
@@ -57729,7 +57729,7 @@ var staticRenderFns = [
           _vm._v(" "),
           _c("input", {
             staticClass: "form-control",
-            attrs: { type: "text", name: "" }
+            attrs: { type: "text", name: "country" }
           })
         ]),
         _vm._v(" "),
@@ -57738,7 +57738,7 @@ var staticRenderFns = [
           _vm._v(" "),
           _c("input", {
             staticClass: "form-control",
-            attrs: { type: "text", name: "" }
+            attrs: { type: "text", name: "state" }
           })
         ]),
         _vm._v(" "),
@@ -57747,7 +57747,7 @@ var staticRenderFns = [
           _vm._v(" "),
           _c("input", {
             staticClass: "form-control",
-            attrs: { type: "text", name: "" }
+            attrs: { type: "text", name: "zip" }
           })
         ])
       ]),

@@ -15,32 +15,32 @@
                 <div class="row">
                     <div class="col-md-12">
                         <label for="">Email</label>
-                        <input type="text" name="" class="form-control">
+                        <input type="email" name="email" class="form-control">
 
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-6 form-group">
                         <label for="">Street</label>
-                        <input type="text" name="" class="form-control">
+                        <input type="text" name="address" class="form-control">
                     </div>
                     <div class="col-md-6 form-group">
                         <label for="">City</label>
-                        <input type="text" name="" class="form-control">
+                        <input type="text" name="city" class="form-control">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-6 form-group">
                         <label for="">Country</label>
-                        <input type="text" name="" class="form-control">
+                        <input type="text" name="country" class="form-control">
                     </div>
                     <div class="col-md-4 form-group">
                         <label for="">State</label>
-                        <input type="text" name="" class="form-control">
+                        <input type="text" name="state" class="form-control">
                     </div>
                     <div class="col-md-2 form-group">
                         <label for="">Zip</label>
-                        <input type="text" name="" class="form-control">
+                        <input type="text" name="zip" class="form-control">
                     </div>
                 </div>
                 <hr>
