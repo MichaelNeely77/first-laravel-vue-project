@@ -22,7 +22,7 @@
                 <div class="row">
                     <div class="col-md-6 form-group">
                         <label for="">Street</label>
-                        <input type="text" name="address" class="form-control">
+                        <input type="text" name="street" class="form-control">
                     </div>
                     <div class="col-md-6 form-group">
                         <label for="">City</label>
