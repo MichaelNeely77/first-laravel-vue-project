@@ -4,42 +4,42 @@
             <div class="col md-8">
                 <div class="form-row">
                     <div class="col-md-6">
-                        <label for="">First name</label>
+                        <label for="first_name">First name</label>
                         <input type="text" name="first_name" class="form-control">
                     </div>
                     <div class="col-md-6">
-                        <label for="">Last name</label>
+                        <label for="last_name">Last name</label>
                         <input type="text" name="last_name" class="form-control">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        <label for="">Email</label>
+                        <label for="email">Email</label>
                         <input type="email" name="email" class="form-control">
 
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-6 form-group">
-                        <label for="">Street</label>
+                        <label for="street">Street</label>
                         <input type="text" name="street" class="form-control">
                     </div>
                     <div class="col-md-6 form-group">
-                        <label for="">City</label>
+                        <label for="city">City</label>
                         <input type="text" name="city" class="form-control">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-6 form-group">
-                        <label for="">Country</label>
+                        <label for="countr">Country</label>
                         <input type="text" name="country" class="form-control">
                     </div>
                     <div class="col-md-4 form-group">
-                        <label for="">State</label>
+                        <label for="state">State</label>
                         <input type="text" name="state" class="form-control">
                     </div>
                     <div class="col-md-2 form-group">
-                        <label for="">Zip</label>
+                        <label for="zip">Zip</label>
                         <input type="text" name="zip" class="form-control">
                     </div>
                 </div>

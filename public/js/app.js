@@ -57674,7 +57674,7 @@ var staticRenderFns = [
     return _c("div", { staticClass: "col md-8" }, [
       _c("div", { staticClass: "form-row" }, [
         _c("div", { staticClass: "col-md-6" }, [
-          _c("label", { attrs: { for: "" } }, [_vm._v("First name")]),
+          _c("label", { attrs: { for: "first_name" } }, [_vm._v("First name")]),
           _vm._v(" "),
           _c("input", {
             staticClass: "form-control",
@@ -57683,7 +57683,7 @@ var staticRenderFns = [
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "col-md-6" }, [
-          _c("label", { attrs: { for: "" } }, [_vm._v("Last name")]),
+          _c("label", { attrs: { for: "last_name" } }, [_vm._v("Last name")]),
           _vm._v(" "),
           _c("input", {
             staticClass: "form-control",
@@ -57694,7 +57694,7 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("div", { staticClass: "row" }, [
         _c("div", { staticClass: "col-md-12" }, [
-          _c("label", { attrs: { for: "" } }, [_vm._v("Email")]),
+          _c("label", { attrs: { for: "email" } }, [_vm._v("Email")]),
           _vm._v(" "),
           _c("input", {
             staticClass: "form-control",
@@ -57705,7 +57705,7 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("div", { staticClass: "row" }, [
         _c("div", { staticClass: "col-md-6 form-group" }, [
-          _c("label", { attrs: { for: "" } }, [_vm._v("Street")]),
+          _c("label", { attrs: { for: "street" } }, [_vm._v("Street")]),
           _vm._v(" "),
           _c("input", {
             staticClass: "form-control",
@@ -57714,7 +57714,7 @@ var staticRenderFns = [
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "col-md-6 form-group" }, [
-          _c("label", { attrs: { for: "" } }, [_vm._v("City")]),
+          _c("label", { attrs: { for: "city" } }, [_vm._v("City")]),
           _vm._v(" "),
           _c("input", {
             staticClass: "form-control",
@@ -57725,7 +57725,7 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("div", { staticClass: "row" }, [
         _c("div", { staticClass: "col-md-6 form-group" }, [
-          _c("label", { attrs: { for: "" } }, [_vm._v("Country")]),
+          _c("label", { attrs: { for: "countr" } }, [_vm._v("Country")]),
           _vm._v(" "),
           _c("input", {
             staticClass: "form-control",
@@ -57734,7 +57734,7 @@ var staticRenderFns = [
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "col-md-4 form-group" }, [
-          _c("label", { attrs: { for: "" } }, [_vm._v("State")]),
+          _c("label", { attrs: { for: "state" } }, [_vm._v("State")]),
           _vm._v(" "),
           _c("input", {
             staticClass: "form-control",
@@ -57743,7 +57743,7 @@ var staticRenderFns = [
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "col-md-2 form-group" }, [
-          _c("label", { attrs: { for: "" } }, [_vm._v("Zip")]),
+          _c("label", { attrs: { for: "zip" } }, [_vm._v("Zip")]),
           _vm._v(" "),
           _c("input", {
             staticClass: "form-control",
