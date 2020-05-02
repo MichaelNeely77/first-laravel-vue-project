@@ -57672,8 +57672,8 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "col md-8" }, [
-      _c("div", { staticClass: "form-row" }, [
-        _c("div", { staticClass: "col-md-6" }, [
+      _c("div", { staticClass: "row" }, [
+        _c("div", { staticClass: "col-md-6 form-group" }, [
           _c("label", { attrs: { for: "first_name" } }, [_vm._v("First name")]),
           _vm._v(" "),
           _c("input", {
@@ -57682,7 +57682,7 @@ var staticRenderFns = [
           })
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "col-md-6" }, [
+        _c("div", { staticClass: "col-md-6 form-group" }, [
           _c("label", { attrs: { for: "last_name" } }, [_vm._v("Last name")]),
           _vm._v(" "),
           _c("input", {
@@ -57693,7 +57693,7 @@ var staticRenderFns = [
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "row" }, [
-        _c("div", { staticClass: "col-md-12" }, [
+        _c("div", { staticClass: "col-md-12 form-group" }, [
           _c("label", { attrs: { for: "email" } }, [_vm._v("Email")]),
           _vm._v(" "),
           _c("input", {
@@ -57758,7 +57758,7 @@ var staticRenderFns = [
         _c(
           "button",
           {
-            staticClass: "btn btn-large btn-primary btn-block",
+            staticClass: "btn btn-lg btn-primary btn-block",
             attrs: { type: "submit" }
           },
           [_vm._v("Book Now!")]
