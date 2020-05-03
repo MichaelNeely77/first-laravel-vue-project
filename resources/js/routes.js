@@ -1,8 +1,9 @@
 import VueRouter from "vue-router";
-import Bookables from "./bookables/Bookables";
-import Bookable from "./bookable/Bookable";
-import Review from "./review/Review";
 import Basket from "./basket/Basket";
+import Bookable from "./bookable/Bookable";
+import Bookables from "./bookables/Bookables";
+import Review from "./review/Review";
+
 
 const routes = [
     {

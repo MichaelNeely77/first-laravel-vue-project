@@ -1,8 +1,9 @@
 <template>
     <div>
         <div class="row">
-            <div class="col md-8">
-                <div class="row">
+            <div class="col-md-8">
+                
+                    <div class="row">
                     <div class="col-md-6 form-group">
                         <label for="first_name">First name</label>
                         <input type="text" name="first_name" class="form-control">
@@ -47,6 +48,8 @@
                 <div class="col-md-12 form-group">
                     <button type="submit" class="btn btn-lg btn-primary btn-block">Book Now!</button>
                 </div>
+
+                
                 
 
 

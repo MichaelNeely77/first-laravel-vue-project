@@ -2071,6 +2071,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   computed: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapGetters"])(["itemsInBasket"]), {}, Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapState"])({
@@ -57671,7 +57674,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col md-8" }, [
+    return _c("div", { staticClass: "col-md-8" }, [
       _c("div", { staticClass: "row" }, [
         _c("div", { staticClass: "col-md-6 form-group" }, [
           _c("label", { attrs: { for: "first_name" } }, [_vm._v("First name")]),
@@ -75611,10 +75614,10 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm.js");
-/* harmony import */ var _bookables_Bookables__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./bookables/Bookables */ "./resources/js/bookables/Bookables.vue");
+/* harmony import */ var _basket_Basket__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./basket/Basket */ "./resources/js/basket/Basket.vue");
 /* harmony import */ var _bookable_Bookable__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./bookable/Bookable */ "./resources/js/bookable/Bookable.vue");
-/* harmony import */ var _review_Review__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./review/Review */ "./resources/js/review/Review.vue");
-/* harmony import */ var _basket_Basket__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./basket/Basket */ "./resources/js/basket/Basket.vue");
+/* harmony import */ var _bookables_Bookables__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./bookables/Bookables */ "./resources/js/bookables/Bookables.vue");
+/* harmony import */ var _review_Review__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./review/Review */ "./resources/js/review/Review.vue");
 
 
 
@@ -75622,7 +75625,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var routes = [{
   path: "/",
-  component: _bookables_Bookables__WEBPACK_IMPORTED_MODULE_1__["default"],
+  component: _bookables_Bookables__WEBPACK_IMPORTED_MODULE_3__["default"],
   name: "home"
 }, {
   path: "/bookable/:id",
@@ -75630,11 +75633,11 @@ var routes = [{
   name: "bookable"
 }, {
   path: "/review/:id",
-  component: _review_Review__WEBPACK_IMPORTED_MODULE_3__["default"],
+  component: _review_Review__WEBPACK_IMPORTED_MODULE_4__["default"],
   name: "review"
 }, {
   path: "basket",
-  component: _basket_Basket__WEBPACK_IMPORTED_MODULE_4__["default"],
+  component: _basket_Basket__WEBPACK_IMPORTED_MODULE_1__["default"],
   name: "basket"
 }];
 var router = new vue_router__WEBPACK_IMPORTED_MODULE_0__["default"]({

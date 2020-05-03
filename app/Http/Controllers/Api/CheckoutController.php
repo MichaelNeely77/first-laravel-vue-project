@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Bookable;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -26,16 +27,14 @@ class CheckoutController extends Controller
             'customer.zip' => 'required|min:2'
         ]);
 
-        $data = $request->validate([
+        $data = array_merge($data, $request->validate([
                 'bookings.*' => ['required', function ($attribute, $value, $fail) {
                 $bookable = Bookable::findOrFail($value['bookable_id']);
 
-                if(!$bokable->availableFor($value['from'], $value['to'])) {
+                if(!$bookable->availableFor($value['from'], $value['to'])) {
                     $fail("The object is not available in given dates");
                 }
             }]
-        ]);
-
-        dd($data);
+        ]));
     }
 }
