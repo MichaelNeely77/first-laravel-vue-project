@@ -1,9 +1,8 @@
 <template>
     <div>
         <div class="row">
-            <div class="col-md-8">
-                
-                    <div class="row">
+            <div class="col-md-8" v-if="itemsInBasket">
+                <div class="row">
                     <div class="col-md-6 form-group">
                         <label for="first_name">First name</label>
                         <input type="text" name="first_name" class="form-control" v-model="customer.first_name">
@@ -45,14 +44,16 @@
                     </div>
                 </div>
                 <hr>
-                <div class="col-md-12 form-group">
-                    <button type="submit" class="btn btn-lg btn-primary btn-block" @click.prevent="book" >Book Now!</button>
+                <div class="row">
+                    <div class="col-md-12 form-group">
+                        <button type="submit" class="btn btn-lg btn-primary btn-block" @click.prevent="book" >Book Now!</button>
+                    </div>
                 </div>
-
-                
-                
-
-
+            </div>
+            <div class="col-md-8" v-else>
+                <div class="jumbotron jumbotron-fluid text-center">
+                    <h1>Your Basket is Empty</h1>
+                </div>
             </div>
             <div class="col-md-4">
                 <div class="d-flex justify-content-between">
