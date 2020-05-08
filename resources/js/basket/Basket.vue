@@ -4,7 +4,7 @@
             Congratulations on your purchase!
         </success>
 
-        <div class="row">
+        <div class="row" v-else>
             <div class="col-md-8" v-if="itemsInBasket">
                 <div class="row">
                     <div class="col-md-6 form-group">
@@ -156,7 +156,7 @@ export default {
     methods: {
         async book() {
             this.loading = true;
-            // this.bookingAttempted = false;
+            this.bookingAttempted = false;
             this.errors = null;
             try {
                 await axios.post(`/api/checkout`, {
@@ -173,7 +173,7 @@ export default {
             }
 
             this.loading = false;
-            this.boookingAttempted = true;
+            this.bookingAttempted = true;
         }
     }
 }
