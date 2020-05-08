@@ -1,5 +1,9 @@
 <template>
     <div>
+        <success v-if="success">
+            Congratulations on your purchase!
+        </success>
+
         <div class="row">
             <div class="col-md-8" v-if="itemsInBasket">
                 <div class="row">
@@ -127,6 +131,7 @@ export default {
     data() {
         return {
             loading: false,
+            bookingAttempted: false,
             customer: {
                 first_name: null,
                 last_name: null,
@@ -143,11 +148,15 @@ export default {
         ...mapGetters(["itemsInBasket"]),
         ...mapState({
             basket: state => state.basket.items
-        })
+        }),
+        success() {
+            return !this.loading && 0 == this.itemsInBasket && this.bookingAttempted;
+        }
     },
     methods: {
         async book() {
             this.loading = true;
+            // this.bookingAttempted = false;
             this.errors = null;
             try {
                 await axios.post(`/api/checkout`, {
@@ -164,6 +173,7 @@ export default {
             }
 
             this.loading = false;
+            this.boookingAttempted = true;
         }
     }
 }
