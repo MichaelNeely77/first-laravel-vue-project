@@ -2,6 +2,7 @@
 
 use App\Bookable;
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
