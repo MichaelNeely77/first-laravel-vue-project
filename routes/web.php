@@ -21,4 +21,8 @@ Route::get('/{any?}', function () {
 
 Auth::routes();
 
+Route::middleware('auth')->get('/user', function( Request $request ) {
+    return $request->user();
+});
+
 Route::get('/home', 'HomeController@index')->name('home');

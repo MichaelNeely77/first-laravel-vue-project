@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Route;
 
 
 
+
 // Route::get('bookables', 'Api\BookableController@index');
 // Route::get('bookables/{id}', 'Api\BookableController@show');
 
